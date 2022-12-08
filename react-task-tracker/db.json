@@ -7,16 +7,10 @@
       "reminder": true
     },
     {
-      "text": "k",
-      "day": "m",
-      "reminder": false,
-      "id": 2
-    },
-    {
-      "text": "final",
-      "day": "dd",
+      "text": "Trabajo",
+      "day": "6:30 AM",
       "reminder": true,
-      "id": 3
+      "id": 2
     }
   ]
 }

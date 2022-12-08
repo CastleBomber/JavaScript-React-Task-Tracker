@@ -101,18 +101,27 @@ function App() {
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}
         />
-        {showAddTask && <AddTask onAdd={addTask} />}
-        {tasks.length > 0 ? (
-          <Tasks
-            tasks={tasks}
-            onDelete={deleteTask}
-            onToggle={toggleReminder}
-          />
-        ) : (
-          "No tasks to show"
-        )}
+
         <Routes>
-          <Route path="/about" component={<About />} />
+          <Route
+            path="/"
+            exact
+            render={(props) => (
+              <>
+                {showAddTask && <AddTask onAdd={addTask} />}
+                {tasks.length > 0 ? (
+                  <Tasks
+                    tasks={tasks}
+                    onDelete={deleteTask}
+                    onToggle={toggleReminder}
+                  />
+                ) : (
+                  "No tasks to show"
+                )}  ``
+              </>
+            )}
+          />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </div>
